@@ -1,0 +1,34 @@
+# Author: Md Mirajul Haque Miraj
+# Copyright 2026 Md Mirajul Haque Miraj
+# SPDX-License-Identifier: Apache-2.0
+# Role: Cybersecurity Consultant
+# Project: ObscuraJ
+
+# ----------------------------------------
+# ObscuraJ Configuration
+# ----------------------------------------
+
+server:
+  host: "127.0.0.1"
+  port: 19191
+
+modules:
+  dns:
+    enabled: true
+
+  subdomain:
+    enabled: true
+
+  wayback:
+    enabled: true
+
+  google_dorks:
+    enabled: true
+
+security:
+  allowed_targets: []
+  max_concurrent_scans: 2
+  request_timeout: 30
+  scan_timeout: 45
+  cors_origins: ["http://localhost:19191"]
+

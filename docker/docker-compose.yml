@@ -1,0 +1,23 @@
+# Author: Md Mirajul Haque Miraj
+# Copyright 2026 Md Mirajul Haque Miraj
+# SPDX-License-Identifier: Apache-2.0
+# Role: Cybersecurity Consultant
+# Project: ObscuraJ
+
+services:
+  obscuraj:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: obscuraj
+
+    ports:
+      - "127.0.0.1:19191:19191"
+
+    environment:
+      OBSCURAJ_API_TOKEN: ${OBSCURAJ_API_TOKEN:-}
+
+    volumes:
+      - ../data:/app/data
+
+    restart: unless-stopped
